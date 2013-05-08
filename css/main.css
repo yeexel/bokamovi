@@ -1,0 +1,25 @@
+.view {
+    display: none;
+}
+
+#hall {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+#hall ul, li {
+    display: inline-block;
+    list-style: none;
+}
+
+#hall ul {
+
+}
+
+#hall li {
+    height: 40px;
+    width: 40px;
+    margin: 2px 2px 0 0;
+    position: relative;
+}

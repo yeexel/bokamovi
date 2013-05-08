@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>bokamovi</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div id="header">
+        <h1 class="text-center"><a href="#/showcase">bokamovi</a></h1>
+      </div>
+
+      <div id="promo" class="hero-unit text-center view">
+        <p><strong>bokamovi</strong> is a web application which helps you to make a reservation in a cinema.</p>
+        <p>Choose a film you'd like to book and then click on the desired seat.</p>
+        <a class="btn btn-large btn-success" href="#/showcase">Go!</a>
+      </div>
+
+      <div id="main" class="row view">
+
+        <div id="movies" class="span9">
+          <div id="filters">
+            <p><strong>Search</strong></p><input data-bind="value: filter, valueUpdate: 'afterkeydown'" type="text" placeholder="Movie title...">
+            <strong>Available:</strong>
+            <!-- ko foreach: timeFilter -->
+            <input type="checkbox" data-bind="checked: isSelected" /> <span data-bind="text: type"></span>
+            <!-- /ko -->
+          </div>
+          <ul data-bind="foreach: filteredMovies" class="thumbnails">
+            <li class="span3 text-center">
+              <div class="thumbnail">
+                <h4 data-bind="text: title"></h4>
+                <img data-bind="attr: { src: poster }">
+                <!-- ko if: type == 'now' -->
+                <p><span class="badge badge-success" data-bind="text: type"></span></p>
+                <!-- /ko -->
+                <!-- ko if: type == 'soon' -->
+                <p><span class="badge badge-warning" data-bind="text: type"></span></p>
+                <!-- /ko -->
+                <a data-bind="attr: { href: '#/hall/' + id }" id="book-btn" class="btn btn-primary" href="#">More info</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div id="cart" class="span3 text-center" style="margin-top: 10px;">
+          <h3>Shopping Cart</h3>
+          <!-- ko ifnot: items().length > 0 -->
+          <p class="well">Empty here.</p>
+          <!-- /ko -->
+          <ul data-bind="foreach: items" class="thumbnails text-center">
+            <div class="thumbnail" style="margin-left: 10px; margin-bottom: 5px;"><li><a data-bind="text: title, attr: { href: '#/hall/' + id }"></a></li><br> (Seats booked: <strong data-bind="text: seatsBooked"></strong>) <a data-bind="click: $root.del" class="close">&times;</a><br></div>
+          </ul>
+          <!-- ko if: items().length > 0 -->
+          <a class="btn btn-info" data-bind="click: save">Checkout</a>
+          <!-- /ko -->
+        </div>
+
+      </div>
+
+      <div id="hall" class="container text-center view">
+        <div id="info" class="row">
+
+          <div class="span6">
+            <h3 data-bind="text: title"></h3>
+            <p></p>
+            <p data-bind="text: description" class="well"></p>
+          </div>
+
+          <div class="span6">
+            <div id="myCarousel" class="carousel slide">
+              <!-- Carousel items -->
+              <div class="carousel-inner">
+                <div class="active item"><img data-bind="attr: { src: img1 }"></div>
+                <div class="item"><img data-bind="attr: { src: img2 }"></div>
+                <div class="item"><img data-bind="attr: { src: img3 }"></div>
+              </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div>
+          <strong>row 1</strong>
+          <ul data-bind="foreach: seats">
+            <li><a class="btn btn-success" data-bind="text: number, click: $parent.changeSeatStatus, css: { 'btn-danger': booked, 'btn-success': unbooked }"></a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>row 2</strong>
+          <ul data-bind="foreach: seats2">
+            <li><a class="btn btn-success" data-bind="text: number, click: $parent.changeSeatStatus, css: { 'btn-danger': booked, 'btn-success': unbooked }"></a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>row 3</strong>
+          <ul data-bind="foreach: seats3">
+            <li><a class="btn btn-success" data-bind="text: number, click: $parent.changeSeatStatus, css: { 'btn-danger': booked, 'btn-success': unbooked }"></a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>row 4</strong>
+          <ul data-bind="foreach: seats4">
+            <li><a class="btn btn-success" data-bind="text: number, click: $parent.changeSeatStatus, css: { 'btn-danger': booked, 'btn-success': unbooked }"></a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>row 5</strong>
+          <ul data-bind="foreach: seats5">
+            <li><a class="btn btn-success" data-bind="text: number, click: $parent.changeSeatStatus, css: { 'btn-danger': booked, 'btn-success': unbooked }"></a></li>
+          </ul>
+        </div>
+        <!-- ko if: numberOfSeatsBooked() > 0 -->
+        <div class="row text-center">
+          <label>Seats booked: </label><h3 data-bind="text: numberOfSeatsBooked, valueUpdate: 'afterkeydown'"></h3>
+        </div>
+        <!-- /ko -->
+        <div class="row alert alert-info" data-bind="visible: hasBookedTooMany">
+          <span>You can book only <strong>5</strong> items.</span>
+        </div>
+        <div class="row" id="btns">
+          <button data-bind="disable: hasBookedTooMany, click: bookSeat" class="btn btn-primary"><i class="icon-ok icon-white"></i> Book!</button>
+          <a class="btn" href="#/showcase">Cancel</a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="js/vendor/jquery-2.0.0.min.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+          interval: 3000
+        });
+      });
+    </script>
+    <script src="js/vendor/sammy-latest.min.js"></script>
+    <script src="js/vendor/knockout-2.2.1.js"></script>
+    <script src="js/vendor/amplify.store.js"></script>
+    <script data-main="js/main" src="js/vendor/require.js"></script>
+  </body>
+</html>

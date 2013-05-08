@@ -1,0 +1,90 @@
+[{
+    "id": "wqddwe1",
+    "title": "Pain & Gain",
+    "description": "A trio of bodybuilders in Florida get caught up in an extortion ring and a kidnapping scheme that goes terribly wrong.",
+    "poster": "img/posters/pain_gain/pain_gain.jpg",
+    "img1": "img/posters/pain_gain/img1.jpg",
+    "img2": "img/posters/pain_gain/img2.jpg",
+    "img3": "img/posters/pain_gain/img3.jpg",
+    "type": "now"
+}, 
+{
+    "id": "cdqas21",
+    "title": "Fast & Furious 6",
+    "description": "Agent Hobbs enlists the aid of Dom and team to help bring a rival gang, led by Owen Shaw, to justice.",
+    "poster": "img/posters/fast_furious/fast_furious.jpg",
+    "img1": "img/posters/fast_furious/img1.jpg",
+    "img2": "img/posters/fast_furious/img2.jpg",
+    "img3": "img/posters/fast_furious/img3.jpg",
+    "type": "soon"
+}, 
+{
+    "id": "4fwqdq1",
+    "title": "Iron Man 3",
+    "description": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, Stark starts an odyssey of rebuilding and retribution.",
+    "poster": "img/posters/iron_man/iron_man.jpg",
+    "img1": "img/posters/iron_man/img1.jpg",
+    "img2": "img/posters/iron_man/img2.jpg",
+    "img3": "img/posters/iron_man/img3.jpg",
+    "type": "soon"
+}, 
+{
+    "id": "cwcwe21",
+    "title": "Oz the Great and Powerful",
+    "description": "A small-time magician is swept away to an enchanted land and is forced into a power struggle between three witches.",
+    "poster": "img/posters/oz/oz.jpg",
+    "img1": "img/posters/oz/img1.jpg",
+    "img2": "img/posters/oz/img2.jpg",
+    "img3": "img/posters/oz/img3.jpg",
+    "type": "now"
+}, 
+{
+    "id": "34dsq21",
+    "title": "The Croods",
+    "description": "After their cave is destroyed, a caveman family must trek through an unfamiliar fantastical world with the help of an inventive boy.",
+    "poster": "img/posters/croods/croods.jpg",
+    "img1": "img/posters/croods/img1.jpg",
+    "img2": "img/posters/croods/img2.jpg",
+    "img3": "img/posters/croods/img3.jpg",
+    "type": "now"
+}, 
+{
+    "id": "vdewe62",
+    "title": "42",
+    "description": "The life story of Jackie Robinson and his history-making signing with the Brooklyn Dodgers under the guidance of team executive Branch Rickey.",
+    "poster": "img/posters/42/42.jpg",
+    "img1": "img/posters/42/img1.jpg",
+    "img2": "img/posters/42/img2.jpg",
+    "img3": "img/posters/42/img3.jpg",
+    "type": "now"
+},
+{
+    "id": "g5fww12",
+    "title": "Kon-Tiki",
+    "description": "The story of legendary explorer Thor Heyerdal's epic 4,300 miles crossing of the Pacific on a balsa wood raft in 1947, in an effort prove it was possible for South Americans to settle in Polynesia in pre-Columbian times.",
+    "poster": "img/posters/kon_tiki/kon_tiki.jpg",
+    "img1": "img/posters/kon_tiki/img1.jpg",
+    "img2": "img/posters/kon_tiki/img2.jpg",
+    "img3": "img/posters/kon_tiki/img3.jpg",
+    "type": "soon"
+},
+{
+    "id": "zx3d232",
+    "title": "The Big Wedding",
+    "description": "A long-divorced couple fakes being married as their family unites for a wedding.",
+    "poster": "img/posters/big_wedding/big_wedding.jpg",
+    "img1": "img/posters/big_wedding/img1.jpg",
+    "img2": "img/posters/big_wedding/img2.jpg",
+    "img3": "img/posters/big_wedding/img3.jpg",
+    "type": "now"
+},
+{
+    "id": "3xtg242",
+    "title": "Scary MoVie",
+    "description": "A couple begin to experience some unusual activity after bringing their newborn son home from the hospital. With the help of home-surveillance cameras and a team of experts, they learn they're being stalked by a nefarious demon.",
+    "poster": "img/posters/scary_movie/scary_movie.jpg",
+    "img1": "img/posters/scary_movie/img1.jpg",
+    "img2": "img/posters/scary_movie/img2.jpg",
+    "img3": "img/posters/scary_movie/img3.jpg",
+    "type": "soon"
+}]
